@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-title>Public holidays</mat-card-title>
+  <mat-card-content>
+    <mat-form-field appearance="fill">
+      <mat-label>Choose an option</mat-label>
+      <mat-select>
+        <mat-option *ngFor="let item of PublicHolidays$ | async" [value]="item">
+          {{ item.name }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card-content>
+</mat-card>
