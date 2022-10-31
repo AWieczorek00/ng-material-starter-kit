@@ -6,6 +6,11 @@ import { CheckboxCategoriesComponent } from './components/checkbox-categories/ch
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { CryptoComponent } from './components/crypto/crypto.component';
 import { PublicHolidaysComponent } from './components/public-holidays/public-holidays.component';
+import { ProductFormComponent } from './components/product-form/product-form.component';
+import { CreateEmployeeComponent } from './components/create-employee/create-employee.component';
+import { LoginComponent } from './components/login/login.component';
+import { ExtendProductComponent } from './components/extend-product/extend-product.component';
+import { RegisterComponent } from './components/register/register.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -14,6 +19,13 @@ import { CheckboxCategoriesComponentModule } from './components/checkbox-categor
 import { CryptoComponentModule } from './components/crypto/crypto.component-module';
 import { CryptoServiceModule } from './services/crypto.service-module';
 import { PublicHolidaysComponentModule } from './components/public-holidays/public-holidays.component-module';
+import { ProductFormComponentModule } from './components/product-form/product-form.component-module';
+import { CreateEmployeeComponentModule } from './components/create-employee/create-employee.component-module';
+import { EmployeeServiceModule } from './services/employee.service-module';
+import { LoginComponentModule } from './components/login/login.component-module';
+import { LoginServiceModule } from './services/login.service-module';
+import { ExtendProductComponentModule } from './components/extend-product/extend-product.component-module';
+import { RegisterComponentModule } from './components/register/register.component-module';
 
 @NgModule({
   imports: [
@@ -23,7 +35,12 @@ import { PublicHolidaysComponentModule } from './components/public-holidays/publ
       { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
       { path: 'crypto', component: CryptoComponent },
-      { path: 'public-holidays', component: PublicHolidaysComponent }
+      { path: 'public-holidays', component: PublicHolidaysComponent },
+      { path: 'create-product', component: ProductFormComponent },
+      { path: 'create-employee', component: CreateEmployeeComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'extend-product', component: ExtendProductComponent },
+      { path: 'register', component: RegisterComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -32,7 +49,14 @@ import { PublicHolidaysComponentModule } from './components/public-holidays/publ
     CheckboxCategoriesComponentModule,
     CryptoComponentModule,
     CryptoServiceModule,
-    PublicHolidaysComponentModule
+    PublicHolidaysComponentModule,
+    ProductFormComponentModule,
+    CreateEmployeeComponentModule,
+    EmployeeServiceModule,
+    LoginComponentModule,
+    LoginServiceModule,
+    ExtendProductComponentModule,
+    RegisterComponentModule
   ],
   exports: [RouterModule],
 })

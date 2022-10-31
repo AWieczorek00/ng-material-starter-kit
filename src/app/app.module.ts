@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from "@angular/common/http";
 import {PublicHolidaysServiceModule} from "./services/public-holidays.service-module";
+import { RegisterServiceModule } from "./services/register.service-module";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {PublicHolidaysServiceModule} from "./services/public-holidays.service-mo
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    PublicHolidaysServiceModule
+    PublicHolidaysServiceModule,
+    RegisterServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]
