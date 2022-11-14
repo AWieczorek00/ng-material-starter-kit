@@ -11,6 +11,7 @@ import { CreateEmployeeComponent } from './components/create-employee/create-emp
 import { LoginComponent } from './components/login/login.component';
 import { ExtendProductComponent } from './components/extend-product/extend-product.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ProductsComponent } from './components/products/products.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -26,11 +27,12 @@ import { LoginComponentModule } from './components/login/login.component-module'
 import { LoginServiceModule } from './services/login.service-module';
 import { ExtendProductComponentModule } from './components/extend-product/extend-product.component-module';
 import { RegisterComponentModule } from './components/register/register.component-module';
+import { ProductsComponentModule } from './components/products/products.component-module';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      { path: 'products', component: ProductListComponent },
+      { path: 'products-list', component: ProductListComponent },
       { path: 'categories', component: CategoriesComponent },
       { path: 'checkbox-categories', component: CheckboxCategoriesComponent },
       { path: 'categories-menu', component: CategoriesMenuComponent },
@@ -40,7 +42,8 @@ import { RegisterComponentModule } from './components/register/register.componen
       { path: 'create-employee', component: CreateEmployeeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'extend-product', component: ExtendProductComponent },
-      { path: 'register', component: RegisterComponent }
+      { path: 'register', component: RegisterComponent },
+      { path: 'products/:category', component: ProductsComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -56,7 +59,8 @@ import { RegisterComponentModule } from './components/register/register.componen
     LoginComponentModule,
     LoginServiceModule,
     ExtendProductComponentModule,
-    RegisterComponentModule
+    RegisterComponentModule,
+    ProductsComponentModule
   ],
   exports: [RouterModule],
 })
