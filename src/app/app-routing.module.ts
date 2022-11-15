@@ -12,6 +12,9 @@ import { LoginComponent } from './components/login/login.component';
 import { ExtendProductComponent } from './components/extend-product/extend-product.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ProductsComponent } from './components/products/products.component';
+import { ProductsFilterSubComponent } from './components/products-filter-sub/products-filter-sub.component';
+import { SortedProductsComponent } from './components/sorted-products/sorted-products.component';
+import { EmployeeAdvancedComponent } from './components/employee-advanced/employee-advanced.component';
 import { ProductListComponentModule } from './components/product-list/product-list.component-module';
 import { ProductServiceModule } from './services/product.service-module';
 import { CategoriesComponentModule } from './components/categories/categories.component-module';
@@ -28,6 +31,9 @@ import { LoginServiceModule } from './services/login.service-module';
 import { ExtendProductComponentModule } from './components/extend-product/extend-product.component-module';
 import { RegisterComponentModule } from './components/register/register.component-module';
 import { ProductsComponentModule } from './components/products/products.component-module';
+import { ProductsFilterSubComponentModule } from './components/products-filter-sub/products-filter-sub.component-module';
+import { SortedProductsComponentModule } from './components/sorted-products/sorted-products.component-module';
+import { EmployeeAdvancedComponentModule } from './components/employee-advanced/employee-advanced.component-module';
 
 @NgModule({
   imports: [
@@ -43,7 +49,10 @@ import { ProductsComponentModule } from './components/products/products.componen
       { path: 'login', component: LoginComponent },
       { path: 'extend-product', component: ExtendProductComponent },
       { path: 'register', component: RegisterComponent },
-      { path: 'products/:category', component: ProductsComponent }
+      { path: 'products/:category', component: ProductsComponent },
+      { path: 'product-filtr', component: ProductsFilterSubComponent },
+      { path: 'sorted-products', component: SortedProductsComponent },
+      { path: 'employee-advanced', component: EmployeeAdvancedComponent }
     ]),
     ProductListComponentModule,
     ProductServiceModule,
@@ -60,7 +69,10 @@ import { ProductsComponentModule } from './components/products/products.componen
     LoginServiceModule,
     ExtendProductComponentModule,
     RegisterComponentModule,
-    ProductsComponentModule
+    ProductsComponentModule,
+    ProductsFilterSubComponentModule,
+    SortedProductsComponentModule,
+    EmployeeAdvancedComponentModule
   ],
   exports: [RouterModule],
 })
